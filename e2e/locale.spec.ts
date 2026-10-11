@@ -96,10 +96,13 @@ test.describe.serial("installed: load, activate, persist, deactivate", () => {
     await expect(page.getByRole("button", { name: "日本語", exact: true })).toBeVisible();
 
     await expect(page.locator(FONT_TAG)).toHaveCount(1);
+    // The shell redefines the token on body, so body — not :root — is where
+    // the override must win.
     const fontFamily = await page.evaluate(() =>
-      getComputedStyle(document.documentElement).getPropertyValue("--dsw-font-family"),
+      getComputedStyle(document.body).getPropertyValue("--dsw-font-family"),
     );
     expect(fontFamily).toContain('"Hiragino Sans"');
+    expect(fontFamily).not.toContain("Microsoft YaHei");
 
     // Persistence through the Host locale scope: reload and a second page in
     // the same context both come back in Japanese.

@@ -47,3 +47,15 @@ shipped CSS-module bundles. The contribution is registered through
   only when Japanese is active.
 - One locale-scoped stylesheet owns the effect, avoids a network dependency,
   and is reversed on locale changes, plugin updates, or removal.
+
+## Amendment (2026-10-12)
+
+The shell's `ui-theme` `base.css` redefines `--dsw-font-family` and
+`--ds-font-family-code` on `body`, so a `:root`-only override no longer
+reaches the app subtree and Japanese fell back to the shipped Chinese faces
+(`PingFang SC`, `Microsoft YaHei`). The tag now targets `:root,body` and also
+overrides `--dsw-font-family-brand` (keeping Montserrat first) and
+`--ds-font-family-code` (Latin monospace faces first, then Japanese faces in
+place of the Chinese tail). The stack gained `"Yu Gothic"` and
+`"Noto Sans CJK JP"`. The e2e check reads the computed token on `body`, the
+element where the shell competes with the plugin.

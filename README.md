@@ -25,15 +25,21 @@ DSH に標準で用意されている **中文**・**English** に加えて、**
 
 ## インストール
 
+
 ```bash
-dsh plugin --profile web add @fang2hou/dsh-locale-ja
+dsh plugin --profile web add github:yukieiji/dsh-locale-ja
 dsh web
+```
+インストールする際に、pnpmのワークスペースビルド周りでエラーが出るので
+```
+allowBuilds:
+  @yukieiji/dsh-locale-ja@https://codeload.github.com/yukieiji/dsh-locale-ja/tar.gz/{コミットハッシュ}: true
 ```
 
 削除する場合は次を実行します。
 
 ```bash
-dsh plugin --profile web remove @fang2hou/dsh-locale-ja
+dsh plugin --profile web remove github:yukieiji/dsh-locale-ja
 ```
 
 ## 使い方

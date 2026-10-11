@@ -325,8 +325,9 @@ assert(
   fontTag !== undefined &&
     fontTag.dataset.pluginCss === `${PACKAGE_ID}/japanese-font.css` &&
     fontTag.textContent.includes("--dsw-font-family") &&
-    fontTag.textContent.includes("Hiragino Sans"),
-  "overrides the base font token with Japanese system faces",
+    fontTag.textContent.includes("Hiragino Sans") &&
+    fontTag.textContent.includes(":root,body"),
+  "overrides the base font token with Japanese system faces on :root and body",
 );
 
 locale.adopt(locale.host);
