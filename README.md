@@ -30,7 +30,7 @@ DSH に標準で用意されている **中文**・**English** に加えて、**
 dsh plugin --profile web add github:yukieiji/dsh-locale-ja
 dsh web
 ```
-インストールする際に、pnpmのワークスペースビルド周りでエラーが出るので
+インストールする際に、pnpmのワークスペースビルド周りでエラーが出るのでC:\Users\{ユーザー名}\.dsh\profiles\web\pnpm-workspace.yamlに以下を追加
 ```
 allowBuilds:
   @fang2hou/dsh-locale-ja@https://codeload.github.com/yukieiji/dsh-locale-ja/tar.gz/{コミットハッシュ}: true
