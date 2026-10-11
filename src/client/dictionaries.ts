@@ -1331,7 +1331,7 @@ const openInApp: LocaleDictOf<"open-in-app"> = {
 };
 
 const permissionAccess: Record<PermissionAccessKey, string> = {
-  "preset.readOnly": "閲覧のみ",
+  "preset.readOnly": "読み取りのみ",
   "preset.workspaceWrite": "ワークスペース内の書き込み",
   "preset.fullAccess": "フルアクセス",
   "confirm.title": "フルアクセスを有効にしますか？",
