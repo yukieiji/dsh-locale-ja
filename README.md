@@ -33,13 +33,13 @@ dsh web
 インストールする際に、pnpmのワークスペースビルド周りでエラーが出るので
 ```
 allowBuilds:
-  @yukieiji/dsh-locale-ja@https://codeload.github.com/yukieiji/dsh-locale-ja/tar.gz/{コミットハッシュ}: true
+  @fang2hou/dsh-locale-ja@https://codeload.github.com/yukieiji/dsh-locale-ja/tar.gz/{コミットハッシュ}: true
 ```
 
 削除する場合は次を実行します。
 
 ```bash
-dsh plugin --profile web remove github:yukieiji/dsh-locale-ja
+dsh plugin --profile web remove @fang2hou/dsh-locale-ja
 ```
 
 ## 使い方
