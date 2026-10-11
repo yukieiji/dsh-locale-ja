@@ -536,7 +536,7 @@ const chat: LocaleDictOf<"chat"> = {
   "image.failed": "画像プレビューを利用できません",
   "image.dialog": "画像プレビュー",
   "image.close": "画像プレビューを閉じる",
-  "chat.deepDivingFor": "深くへ潜航中{duration}）···",
+  "chat.deepDivingFor": "深くへ潜航中({duration}）···",
   "settings.performance.title": "パフォーマンスと使用量",
   "settings.performance.description": "パフォーマンスと使用量の表示範囲を選択します",
   "settings.performance.compact": "簡潔",
